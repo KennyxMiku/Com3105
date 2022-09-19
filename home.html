@@ -2,15 +2,25 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+	<link href='https://fonts.googleapis.com/css?family=DM Serif Display' rel='stylesheet'>
 <!--    
 	Author: Hans Yip
 	Date:  1/9/2020
 -->
 	<title>HSU accessories</title>
 	<style>
-		html { 
-		  background: url(background.png) no-repeat center fixed; 
+		body {
+          margin: 0;
+          font-family: 'DM Serif Display';
+        }
+		.image { 
+		  background-image: url("background.png");
+          background-color: #cccccc;
+          height: 700px;
+          background-position: center;
+          background-repeat: no-repeat;
           background-size: cover;
+          position: relative;
 		}
 		ul {
 		  list-style-type: none;
@@ -33,17 +43,13 @@
 		  font-size: 27px;
 		}
 
-		.p1 {
-		  font-family: "Times New Roman", Times, serif;
-		}
-
-		.p2 {
-          font-family: "Lucida Console", "Courier New", monospace;
-        }
-
-		h1,h4 {
+		.text {
 		  text-align: center;
-		  color: rgb(15, 94, 198);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: rgba(153, 69, 12, 0.813);	
 		}
 		
 		
@@ -57,16 +63,13 @@
 		  <li><a class="p1" href="#">Product</a></li>
 		  <li style="float:right"><a class="active" href=""><img src="cart.png"></a></li>
 		</ul>
-    </br>
-    </br> 
-	</br>
-	</br>
-	</br>
-	</br>
-		<h1>Phone Accessories?</h1>
-		<h4 class="p2">We will provide valuable phone cases, portable charger</h4> 
-		<h4 class="p2">and other items relate to phone accessories.</h4>
-		<button style="margin:0 auto;display: block;">Shop Now</button>
+		<div class="image">
+		  <div class="text">
+		    <h1 style="font-size:50px">Phone Accessories?</h1>
+		    <h3>We will provide valuable phone cases, portable charger and other items relate to phone accessories.</h3> 
+		    <button style="margin:0 auto;display: block;">Shop Now</button>
+		  </div>
+		</div>
 	  </nav>
 	<footer>
 		<p>Chan Ka Lok, Kenny s215408 |
