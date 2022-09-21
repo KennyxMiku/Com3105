@@ -3,10 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<!--    
-	Author: Hans Yip
-	Date:  1/9/2020
--->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<title>HSU accessories</title>
 	<style>
 		body {
@@ -21,28 +20,7 @@
           background-size: cover;
           position: relative;
 		}
-		ul {
-		  list-style-type: none;
-		  margin: 0;
-		  padding: 0;
-		  padding-left: 67%;
-		  overflow: hidden;
-		  background-color: #e7cf8a9e;
-		}
 		
-		li {
-		  float: left;
-		}
-		
-		li a {
-		  display: block;
-		  color: rgb(40, 141, 199);
-		  text-align: center;
-		  padding: 5px 16px;
-		  text-decoration: none;
-		  font-size: 27px;
-		}
-
 		.text {
 		  text-align: center;
           position: absolute;
@@ -71,25 +49,27 @@
 		footer {
 		  background-color: #e7cf8a9e;
 		}
-		
-		
 		</style>
 </head>
 <body>
-	<nav class="menu">
-		<ul>
-		  <li><a class="p1" href="#">Home</a></li>
-		  <li><a class="p1" href="#">Product</a></li>
-		  <li style="float:right"><a class="active" href=""><img src="cart.png"></a></li>
-		</ul>
-		<div class="image">
-		  <div class="text">
-		    <h1 style="font-size:50px">Phone Accessories?</h1>
-		    <h3>We are currently providing valuable phone cases, portable charger and other items relate to phone accessories.</h3> 
-		    <button class="button">Shop Now</button>
+	<nav class="navbar navbar-default navbar-static-top">
+		<div class="container-fluid">
+		  <div class="navbar-header">
+			<a class="navbar-brand" href="#">HSU Accessories</a>
 		  </div>
+		  <ul class="nav navbar-nav navbar-right">
+			<li class="active"><a href="#">Home</a></li>
+			<li><a href="#">Product</a></li>
+		  </ul>
 		</div>
 	  </nav>
+	  <div class="image">
+		<div class="text">
+		  <h1 style="font-size:50px">Phone Accessories?</h1>
+		  <h3>We are currently providing valuable phone cases, portable charger and other items relate to phone accessories.</h3> 
+		  <button class="button">Shop Now</button>
+		</div>
+	  </div>
 	<footer>
 		Chan Ka Lok, Kenny s215408 |
 			Chan Sheung Chun, Hugo s215409 |
