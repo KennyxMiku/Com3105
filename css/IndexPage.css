@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
   --body-color: #2c2d2a;
   --savanna-bg: #e9bf8b;
@@ -81,14 +82,10 @@ body {
   }
 }
 
-.logo {
-  width: 116px;
-}
-
 .header {
   display: flex;
   align-items: center;
-  height: 62px;
+  height: 60px;
   width: 100%;
   white-space: nowrap;
   flex-shrink: 0;
@@ -98,9 +95,28 @@ body {
   position: sticky;
   top: 0;
   left: 0;
-  background-color: var(--beach-bg);
+  background-color: transparent;
+  /* background-color: var(--beach-bg); */
   z-index: 6;
 }
+
+header a {
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  opacity: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0px 16px 0px;
+  background-color: transparent;
+  color: rgb(209 213 219 / 1);
+}
+
 @media (max-width: 575px) {
   .header {
     width: calc(100% + 20px);
@@ -408,21 +424,31 @@ body {
   background-color: var(--coral-bg);
 }
 
+/* Nav Part From HomePage */
+
 .logo {
+  display: flex;
   text-align: center;
   text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
   font-size: 2rem;
   line-height: 2.5rem;
   font-weight: 500;
-  color: black; 
+  color: #171717; 
   margin: 24px;
   text-decoration: none;
+  margin-left: 20px;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 
 .navSection {
   position: fixed;
   width: 100%;
-  height: 80px;
+  height: 60px;
   opacity: 1;
   display: flex;
   justify-content: space-between;
@@ -433,32 +459,127 @@ body {
 }
 
 ul.nav__list {
-  margin: 0;
-  padding: 0;
   display: flex;
   list-style: none;
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+  margin: 30px;
 }
 
 ul.nav__list li {
   margin: 0 10px;
   padding: 24px 15px;
+  border-radius: 9999px;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  letter-spacing: 2px;
+  text-align: center;
+  cursor: pointer;
 }
 
 ul.nav__list a {
   color: rgb(176, 180, 185);
-  font-size: 2rem;
-  line-height: 2.5rem;
-  border-radius: 9999px;
-  letter-spacing: 2px;
-  text-align: center;
-  text-decoration: none;
 }
 
-ul.nav__list li a:hover {
-color: paleturquoise;
-  cursor: pointer;
+ul.nav__list li:hover {
+color: #3498db;
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+ul.nav__list a:hover {
+color: #3498db;
 }
 
 ul.nav__list li a.active {
-  color: black;
+  color: #171717;
+}
+
+#hamburger-icon {
+  margin: 30px;
+  display: none;
+  cursor: pointer;
+}
+
+#hamburger-icon div {
+  width: 35px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 16px;
+  transition: 0.4s;
+}
+
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mobile-menu {
+  list-style: none;
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  margin: 0 -30px;
+  background-color: transparent;
+  height: calc(100vh - 50px);
+  width: 100%;
+
+}
+
+ul.mobile-menu li {
+  margin: 0 10px;
+  padding: 24px 15px;
+  border-radius: 9999px;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  letter-spacing: 2px;
+  text-align: center;
+  cursor: pointer;
+}
+
+ul.mobile-menu a {
+  color: rgb(176, 180, 185);
+}
+
+ul.mobile-menu li:hover {
+  color: #3498db;
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+ul.mobile-menu a:hover {
+  color: #3498db;
+}
+
+ul.mobile-menu li a.active {
+  color: #171717;
+}
+
+@media only screen and (max-width: 768px) {
+  header nav {
+      display: none;
+  }
+
+  #hamburger-icon {
+      display: block;
+    }
+  
 }

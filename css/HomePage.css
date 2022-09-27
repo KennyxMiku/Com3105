@@ -155,7 +155,7 @@ ul.nav__list li a.active {
     background: url('../src/HomeBackground/background-remake.jpg') no-repeat center center fixed;
     height: 100vh;
     background-size: cover;
-    animation: change 45s infinite ease-in-out;
+    animation: change 48s infinite ease-in-out;
 }
 
 .background-img-origin {
@@ -295,7 +295,7 @@ ul.mobile-menu li a.active {
 
 /*Mobile Part*/
 
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     header nav {
         display: none;
     }
