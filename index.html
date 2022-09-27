@@ -6,8 +6,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel='stylesheet' href='https://unpkg.com/swiper/swiper-bundle.min.css'>
   <link rel="stylesheet" href="./css/IndexPage.css">
-
-
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -20,10 +18,13 @@
 			<nav>
 				<ul class="nav__list">
 					<li>
-						<a  href="home.html">Home</a>
+						<a href="home.html">Home</a>
 					</li>
 					<li>
 						<a class="active" href="index.html">Product</a>
+					</li>
+					<li>
+						<a href="#id1">Cart</a>
 					</li>
 				</ul>
 			</nav>
@@ -76,7 +77,7 @@
 
 	<script src="HamburgerScript.js"></script>
 
-	<div class="mySwiper">
+	<mian class="mySwiper">
 		<div class="main-wrapper swiper-wrapper">
 			<div class="main swiper-slide" id="beach">
 				<div class="left-side">
@@ -149,7 +150,7 @@
 			<div class="main swiper-slide" id="glacier">
 				<div class="left-side">
 					<div class="main-wrapper">
-						<h3 class="main-header">I-Phone 12 case</h3>
+						<h3 class="main-header">IPhone 12 case</h3>
 						<h1 class="main-title">Anime edition</h1>
 						<h2 class="main-subtitle">€ 39.90</h2>
 					</div>
@@ -208,27 +209,233 @@
 				</div>
 			</div>
 		</div>
+	</mian>
+
+	<div class="button-wrapper">
+			<div class="swiper-button swiper-prev-button">
+				<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+				</svg>
+			</div>
+			<div class="swiper-button swiper-next-button">
+				<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+				</svg>
+			</div>
 	</div>
 
-	
-	<div class="button-wrapper">
-		<div class="swiper-button swiper-prev-button">
-			<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-			</svg>
-		</div>
-		<div class="swiper-button swiper-next-button">
-			<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-			</svg>
-		</div>
-	</div>
 	<div class="swiper-pagination"></div>
 
 </div>
+
+	<!-- Page Number -->
+	<div class="swiper-pagination"></div>
+
+	
+<!-- Not Finish Yet --Remake!! -->
+<section class="tableForm" id="id1">
+
+	<h1 class="sectionTitle" >Shopping Cart</h1>
+
+	<form>
+		<table>
+		<tr>
+			<th class="productItem">Item</th>
+			<th class="productDetail">Detail</th>
+			<th class="productQuantity">Quantity</th>
+			<th class="productPrice">Price</th>
+			<th>Amount
+				<form class="form-inline">	</form>
+			</th>
+		</tr>
+		<div><br></div>
+		<tr class="product">
+			<td class="product-image">
+				<img src="src/Red.jpg">
+			</td>
+			<td class="product-title">
+				<h1>iphone 12 case - Anime edition</h1>
+				<p>Very Good</p>
+			</td>
+			<td class="product-Quantity">
+				<input type="number" id="qty1" min="0" value="0" oninput="process()">
+			</td>
+			<td class="product-price">
+				<p>€ 39.90</p>
+			</td>
+			<td class="product-TotalPrice">
+				<div>
+					<span>€</span>
+					<input type="text" id="itemtot1" placeholder="Amount" disabled>
+				</div>
+			</td>
+		</tr>
+
+		<!-- 2 -->
+		<tr class="product">
+			<td class="product-image">
+				<img src="src/Black.jpg">
+			</td>
+			<td class="product-title">
+				<h1>iphone 14 case - Midnight Blue</h1>
+				<p>Very Good</p>
+			</td>
+			<td class="product-Quantity">
+				<input type="number" id="qty1" min="0" value="0" oninput="process()">
+			</td>
+			<td class="product-price">
+				<p>€ 39.90</p>
+			</td>
+			<td class="product-TotalPrice">
+				<div>
+					<span>€</span>
+					<input type="text" id="itemtot1" placeholder="Amount" disabled>
+				</div>
+			</td>
+		</tr>
+		<!-- 3 -->
+		<tr class="product">
+			<td class="product-image">
+				<img src="src/Green.jpg">
+			</td>
+			<td class="product-title">
+				<h1>iphone X - Coral</h1>
+				<p>Very Good</p>
+			</td>
+			<td class="product-Quantity">
+				<input type="number" id="qty1" min="0" value="0" oninput="process()">
+			</td>
+			<td class="product-price">
+				<p>€ 39.90</p>
+			</td>
+			<td class="product-TotalPrice">
+				<div>
+					<span>€</span>
+					<input type="text" id="itemtot1" placeholder="Amount" disabled>
+				</div>
+			</td>
+		</tr>
+		<!-- 4 -->
+
+		<tr class="product">
+			<td class="product-image">
+				<img src="src/Blue.jpg">
+			</td>
+			<td class="product-title">
+				<h1>iphone 13 case - Red Product</h1>
+				<p>Very Good</p>
+			</td>
+			<td class="product-Quantity">
+				<input type="number" id="qty1" min="0" value="0" oninput="process()">
+			</td>
+			<td class="product-price">
+				<p>€ 39.90</p>
+			</td>
+			<td class="product-TotalPrice">
+				<div>
+					<span>€</span>
+					<input type="text" id="itemtot1" placeholder="Amount" disabled>
+				</div>
+			</td>
+		</tr>
+
+
+
+		<!-- <tr id="tr-color">
+			<td height="330">
+				<img src="src/Black.jpg">
+				<br/><br>iphone 14 case - Midnight Blue
+			</td>
+			<td>
+				<input type="number" id="qty2" min="0" value="0" oninput="process()">
+			</td>
+			<td>
+				€ 39.90
+			</td>
+			<td>
+				<div>
+					<span>€</span>
+					<input type="text" id="itemtot2" placeholder="Amount" disabled>
+				</div>
+			</td>
+		</tr>
+		<tr id="tr-color">
+			<td height="330">
+				<img src="src/Green.jpg"><br/><br>iphone X - Coral
+			</td>
+			<td>
+				<input type="number" id="qty3" min="0" value="0" oninput="process()">
+			</td>
+			<td>
+				€ 39.90
+			</td>
+			<td>
+				<div>
+					<span>€</span>
+					<input type="text" id="itemtot3" placeholder="Amount" disabled>
+				</div>
+			</td>
+		</tr>
+		<tr id="tr-color">
+			<td height="330">
+				<img src="src/Blue.jpg">
+				<br/><br>iphone 13 case - Red Product
+			</td>
+			<td>
+				<input type="number" id="qty4" min="0" value="0" oninput="process()" disabled>
+				<br>
+				<span style="color: rgb(255, 157, 157)">
+					(Sold out)
+				</span>
+			</td>
+			<td>
+				€ 39.90
+			</td>
+			<td>
+				<div>
+					<span>
+						€
+					</span>	
+					<input type="text" id="itemtot4" placeholder="Amount" disabled>
+				</div>
+			</td>
+		</tr>
+		<tr id="tr-color">
+			<td height="160" colspan="3" style="text-align: center; line-height: 55px; font-size: 30px;" >
+				Total Amount Sold: 
+			</td>
+			<td>
+				<div>
+					<span>
+						€
+					</span>
+					<input type="text" id="totsold" style="border: 1px solid rgba(255, 98, 0, 0.945)" placeholder="Amount" disabled>
+				</div>
+			</td>
+		</tr> -->
+		</table>
+		<div><br></div>
+		<div><br></div>
+		<button style="font-size: 20px;" type="reset" id = "button">
+			Reset
+		</button>
+		<button style="font-size: 20px;" type="button" id = "button" onclick="Paypal()" value = "Checkout - Use Paypal"  >
+			Checkout - Use Paypal
+		</button>
+		<div>
+			<br>
+		</div>
+		<div>
+			<br>
+		</div>
+	</form>
+
+</section>
+
 <!-- partial -->
   <script src='https://unpkg.com/swiper/swiper-bundle.min.js'></script>
   <script src="./script.js"></script>
+  <script src="./Payment.js"></script>
 
 </body>
 </html>
