@@ -30,7 +30,7 @@
 	a{
 		color: black;
 	}
-	#pink{
+	#tr-color{
 		background-color: rgb(254, 255, 255)
 	}
 
@@ -122,9 +122,6 @@
 
 <script language="JavaScript" type="text/javascript">
 	function process() {
-	
-	/* #4 add javascript processing here  */
-	/* #a. selling 3 items only */
 		var price = [0, 39.90, 39.90, 39.90, 39.90];
 		var qty = 0;
 		var itemtot = 0;
@@ -153,15 +150,12 @@
 
 <body>
 
-<!-- partial:index.partial.html -->
-
 <div>
 	<div class="header">
-		<!-- This line code below for menu icon -->	
         <div><img class="logo" src="src/applelogo.png" style="height: 1000">
 		</div>
 		<span style="margin-left: -30px; height: 16px">
-			HSU Accessories	
+			PHONETIFY	
 		</span>
 		<span style="text-align: center">
 			<h1 style="margin-left: 310px; height: 50px" >
@@ -178,8 +172,6 @@
 			<a></a>
 	</div>
 </div>
-	
-
 	
 	<form class="w3-container">
 		<table style="margin-top: 30px">
@@ -200,7 +192,7 @@
 			</th>
 		</tr>
 		<div><br></div>
-		<tr id="pink">
+		<tr id="tr-color">
 			<td height="330">
 				<img src="src/Red.jpg">
 				<br/><br>iphone 12 case - Anime edition
@@ -216,7 +208,7 @@
 				</div>
 			</td>
 		</tr>
-		<tr id="pink">
+		<tr id="tr-color">
 			<td height="330">
 				<img src="src/Black.jpg">
 				<br/><br>iphone 14 case - Midnight Blue
@@ -234,7 +226,7 @@
 				</div>
 			</td>
 		</tr>
-		<tr id="pink">
+		<tr id="tr-color">
 			<td height="330">
 				<img src="src/Green.jpg"><br/><br>iphone X - Coral
 			</td>
@@ -251,13 +243,17 @@
 				</div>
 			</td>
 		</tr>
-		<tr id="pink">
+		<tr id="tr-color">
 			<td height="330">
 				<img src="src/Blue.jpg">
 				<br/><br>iphone 13 case - Red Product
 			</td>
 			<td>
-				<input type="number" id="qty4" min="0" value="0" oninput="process()">
+				<input type="number" id="qty4" min="0" value="0" oninput="process()" disabled>
+				<br>
+				<span style="color: rgb(255, 157, 157)">
+					(Sold out)
+				</span>
 			</td>
 			<td>
 				€ 39.90
@@ -271,7 +267,7 @@
 				</div>
 			</td>
 		</tr>
-		<tr id="pink">
+		<tr id="tr-color">
 			<td height="160" colspan="3" style="text-align: center; line-height: 55px; font-size: 30px;" >
 				Total Amount Sold: 
 			</td>
@@ -301,7 +297,6 @@
 		</div>
 		</form>
 
-<!-- partial -->
   <script src='https://unpkg.com/swiper/swiper-bundle.min.js'></script><script  src="./script.js"></script>
 
 </body>
