@@ -120,12 +120,12 @@
 
 </style>
 
-<script language="JavaScript" type="text/javascript">
+<script language="JavaScript" type="text/javascript">	
+	var totsold = 0;
 	function process() {
 		var price = [0, 39.90, 39.90, 39.90, 39.90];
 		var qty = 0;
 		var itemtot = 0;
-		var totsold = 0;
 		var i;
 		for (i = 1; i <= 4; i++)  {
 			qty = parseInt(document.querySelector("#qty" + i).value);
@@ -140,8 +140,12 @@
 		document.querySelector("#totsold").value = totsold.toFixed(2);
 	}
 	function Paypal() {	
+		if (totsold > 0) {
 		alert("Execute Paypal()...");
 		var aprvlWin = window.open("com3105_approval.html", "approvalWin", width="180", height="150");
+	} else {
+		alert("Please enter number of quantity...");
+	}
 	}
 	
 </script>
