@@ -77,7 +77,7 @@
 
 	<script src="HamburgerScript.js"></script>
 
-	<mian class="mySwiper">
+	<main class="mySwiper">
 		<div class="main-wrapper swiper-wrapper">
 			<div class="main swiper-slide" id="beach">
 				<div class="left-side">
@@ -122,11 +122,11 @@
 				<div class="left-side">
 					<div class="main-wrapper">
 						<h3 class="main-header">Iphone 14 Case</h3>
-						<h1 class="main-title">Blue </h1>x
+						<h1 class="main-title">Blue </h1>
 						<h2 class="main-subtitle">$ 299.0</h2>
 					</div>
 					<div class="main-content">
-						<div class="main-content__title">Green
+						<div class="main-content__title">Blue Edition
 						</div>
 						<div class="main-content__subtitle">This Color case represent trust , responsibility and relaxation </div>
 						<a href="#id1" class="a">
@@ -188,7 +188,7 @@
 				<div class="left-side">
 					<div class="main-wrapper">
 						<h3 class="main-header">I Phone 14</h3>
-						<h1 class="main-title">limited Edition
+						<h1 class="main-title">Limited Edition
 						</h1>
 						<h2 class="main-subtitle">$ 299.0</h2>
 					</div>
@@ -218,7 +218,7 @@
 				</div>
 			</div>
 		</div>
-	</mian>
+	</main>
 
 	<div class="button-wrapper">
 			<div class="swiper-button swiper-prev-button">
@@ -233,7 +233,7 @@
 			</div>
 	</div>
 
-	<div class="swiper-pagination"></div>
+	<!-- <div class="swiper-pagination"></div> -->
 
 </div>
 
@@ -257,8 +257,8 @@
 			<th class="productDetail">Detail</th>
 			<th class="productQuantity">Quantity</th>
 			<th class="productPrice">Price</th>
-			<th>Amount
-				<form class="form-inline">	</form>
+			<th class="productAmount">Amount
+				<!-- <form class="form-inline">	</form> -->
 			</th>
 		</tr>
 		<div><br></div>
@@ -428,19 +428,22 @@
 		</tr> -->
 		</table>
 		<div><br></div>
-		<div><br></div>
-		<button style="font-size: 20px;" type="reset" id = "button">
-			Reset
-		</button>
-		<button style="font-size: 20px;" type="button" id = "button" onclick="Paypal()" value = "Checkout - Use Paypal"  >
-			Checkout - Use Paypal
-		</button>
-		<div>
+		<!-- <div><br></div> -->
+		<div class="frame">
+			<button class="custom-btn resetButton" type="reset" id = "button">
+				Reset
+			</button>
+			<button class="custom-btn1 confirmButton" type="button" id = "button" onclick="Paypal()" value = "Checkout - Use Paypal"  >
+				Checkout - Use Paypal
+			</button>
+		</div>
+
+		<!-- <div>
 			<br>
 		</div>
 		<div>
 			<br>
-		</div>
+		</div> -->
 	</form>
 
 </section>
