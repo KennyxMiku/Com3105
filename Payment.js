@@ -1,10 +1,10 @@
 function process() {
-		var price = [0, 39.90, 39.90, 39.90, 39.90];
+		var price = [299.90, 299.90, 299.90, 299.90];
 		var qty = 0;
 		var itemtot = 0;
 		var totsold = 0;
 		var i;
-		for (i = 1; i <= 4; i++)  {
+		for (i = 0; i <= 3; i++)  {
 			qty = parseInt(document.querySelector("#qty" + i).value);
 			if (isNaN(qty)) {
 				;

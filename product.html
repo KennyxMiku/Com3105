@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<!--    
+	Author: Hans Yip
+	Date:  1/9/2020
+-->
+	<title>HSU accessories</title>
+	<!-- #3 add javascript here -->
+<script language="JavaScript" type="text/javascript">
+	function process() {
+		alert("Execute process()...");
+	
+	/* #4 add javascript processing here  */
+	/* #a. selling 3 items only */
+		var price = [0, 2.98, 4.5, 9.98];
+		var qty = 0;
+		var itemtot = 0;
+		var totsold = 0;
+	
+		var i;
+	
+		for (i = 1; i <= 3; i++)  {
+			qty = parseInt(document.querySelector("#qty" + i).value);
+			if (isNaN(qty)) {
+				;
+			} else {
+				itemtot = qty * price[i];
+				document.querySelector("#itemtot" + i).value = itemtot.toFixed(2);
+				totsold += itemtot;
+			}
+		}
+	
+		document.querySelector("#totsold").value = totsold.toFixed(2);
+	
+		if (totsold > 0) {
+			var aprvlWin = window.open("com3105_approval.html", "approvalWin", width="180", height="150");
+		} else {
+			alert("Please enter number of quantity...");
+		}
+	
+	}
+	
+	</script>
+
+
+
+	<style>
+		body {
+          margin: 0;
+          font-family: 'Poppins', sans-serif;
+        }
+		.image { 
+		  background-image: url("background.png");
+          height: 1000px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: relative;
+		}
+		ul {
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		  padding-left: 67%;
+		  overflow: hidden;
+		  background-color: #e7cf8a9e;
+		}
+		
+		li {
+		  float: left;
+		}
+		
+		li a {
+		  display: block;
+		  color: rgb(40, 141, 199);
+		  text-align: center;
+		  padding: 5px 16px;
+		  text-decoration: none;
+		  font-size: 27px;
+		}
+
+		.text {
+		  text-align: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: rgba(153, 69, 12, 0.813);	
+		}
+
+		.button {
+          background-color: white;
+          border: 2px solid #e7e7e7;
+          color: rgba(153, 69, 12, 0.813);
+          padding: 10px 24px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+          border-radius: 15px;
+        }
+
+		.button:hover {background-color: #e7e7e7;}
+
+		footer {
+		  background-color: #e7cf8a9e;
+		}
+		
+		
+		</style>
+</head>
+<body>
+	<nav class="menu">
+		<ul>
+		  <li><a class="p1" href="#">Home</a></li>
+		  <li><a class="p1" href="#">Product</a></li>
+		  <li style="float:right"><a class="active" href=""><img src="cart.png"></a></li>
+		</ul>
+		<div class="image">
+		  <div class="text">
+		    <h1 style="font-size:50px">Phone Accessories?</h1>
+		    <h3>We are currently providing valuable phone cases, portable charger and other items relate to phone accessories.</h3> 
+		    <button class="button">Shop Now</button>
+		  </div>
+		</div>
+	  </nav>
+
+
+	  <form>
+		<table border="2">
+		<tr><th>Item</th><th>Quantity</th><th>Unit Price</th><th>Amount</th></tr>
+	
+		<tr><td>Category 1 - Product 1</td><td><input type="text" id="qty1"></td>
+		<td>$2.98</td><td><input type="text" id="itemtot1"></td>
+		</tr>
+	
+		<tr><td>Category 1 - Product 2</td><td><input type="text" id="qty2"></td>
+		<td>$4.50</td><td><input type="text" id="itemtot2"></td>
+		</tr>
+	
+		<tr><td>Category 2 - Product A</td><td><input type="text" id="qty3"></td>
+		<td>$9.98</td><td><input type="text" id="itemtot3"></td>
+		</tr>
+	
+		<tr><td colspan="3">Total Amount Sold: </td><td><input type="text" id="totsold"></td>
+		</tr>
+	
+		</table>
+		<br />
+		<input type="reset" value = "Reset" />
+		<input type="button" value = "Checkout - Use Paypal" onclick="process()" />
+		</form>
+
+
+</body>
+</html>
