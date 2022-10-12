@@ -1,5 +1,5 @@
 function process() {
-		var price = [299.00, 299.0, 299.0, 299.0];
+		var price = [299.90, 299.90, 299.90, 299.90];
 		var qty = 0;
 		var itemtot = 0;
 		var totsold = 0;
