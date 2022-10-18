@@ -51,7 +51,8 @@ http.createServer(function (request, response) {
 
 }).listen(80);
 
-
-console.log('Server running at http://localhost/com3105_project.html or http://127.0.0.1:80/com3105_project.html');
+// Need to Change the HTML File Name first
+// console.log('Server running at http://localhost/com3105_project.html or http://127.0.0.1:80/com3105_project.html');
+console.log('Server running at http://localhost/home.html or http://127.0.0.1:80/home.html');
 
 console.log('Server Program Ended.');
