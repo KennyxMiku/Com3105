@@ -9,7 +9,7 @@
 
   <script language="JavaScript" type="text/javascript">
 	function nextprocess(fm) {
-		//process(fm);
+		process(fm);
 	alert("Username length: " + document.querySelector("#username").value.length);
 	alert("Qty: " + fm.qty.value);
 	
@@ -26,9 +26,8 @@
 		fm.qty.focus();
 		return false;
 	}
-	//var ha =fm.qty.value;
 	var url = "http://localhost:3000/add_cart?prod_id=" + fm.prod_id.value +
-		"&qty=" + fm.qty.value  + "&price=" + fm.price.value + "&f_username=" + fm.f_username.value; 
+		"&qty=" + fm.qty.value + "&price=" + fm.price.value + "&f_username=" + fm.f_username.value; 
 	
 	alert("url: " + url);
 	
@@ -43,8 +42,8 @@
 	
 	
 	}
-	function process(fm) {
-		var price = fm.price.value;
+	function process() {
+		var price = [299.00, 299.00, 299.00, 299.00];
 		var qty = fm.qty.value;
 		var itemtot = 0;
 		var totsold = 0;
@@ -282,14 +281,8 @@
 	<section class="container" id="id1">
 
 	<!-- <h1 class="sectionTitle" >Shopping Cart</h1> -->
-	<table>
-		<td colspan="12" style="text-align: left; line-height: 55px; font-size: 30px;">
-			<div>
-				<p>Customer User Name: <input style="border: 1px solid rgba(255, 98, 0, 0.945)" type="text" name="username" id="username" value=""></p>
-			</div>
-		</td>
 
-	</table>
+	<p>Customer User Name: <input type="text" name="username" id="username" value=""></p>
 
 	<table>
 		<tr>
@@ -313,7 +306,14 @@
 				<p>Special Edition</p>
 			</td>
 			<td class="product-Quantity">
-				<input type="number" name="qty" id="qty" oninput="process()">
+				<select name="qty" id="qty">
+					<option>0</option>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					</select>
 			</td>
 			<td class="product-price">
 				<p>$ 299.0<input type="hidden" name="price" id="price" value="299.0"></p>
@@ -325,7 +325,6 @@
 				</div>
 			</td>
 			<td>
-				<input type="hidden" name="f_username" id="f_username" value="">
 				<input type="submit" value="Add to shopping cart">
 			</td>
 		</tr>
@@ -343,7 +342,14 @@
 				<p>Special Edition</p>
 			</td>
 			<td class="product-Quantity">
-				<input type="number" name="qty" id="qty" oninput="process()">
+				<select name="qty" id="qty">
+					<option>0</option>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					</select>
 			</td>
 			<td class="product-price">
 				<p>$ 299.0<input type="hidden" name="price" id="price" value="299.0"></p>
@@ -355,7 +361,6 @@
 				</div>
 			</td>
 			<td>
-				<input type="hidden" name="f_username" id="f_username" value="">
 				<input type="submit" value="Add to shopping cart">
 			</td>
 		</tr>
@@ -373,8 +378,14 @@
 				<p>Limited Edition</p>
 			</td>
 			<td class="product-Quantity">
-				<input type="number" name="qty" id="qty" oninput="process()">
-		
+				<select name="qty" id="qty">
+					<option>0</option>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					</select>
 			</td>
 			<td class="product-price">
 				<p>$ 299.0<input type="hidden" name="price" id="price" value="299.0"></p>
@@ -386,7 +397,6 @@
 				</div>
 			</td>
 			<td>
-				<input type="hidden" name="f_username" id="f_username" value="">
 				<input type="submit" value="Add to shopping cart">
 			</td>
 		</tr>
@@ -403,7 +413,14 @@
 				<p>sold out</p>
 			</td>
 			<td class="product-Quantity">
-				<input type="number" name="qty" id="qty" oninput="process()">
+				<select name="qty" id="qty" disabled>
+					<option>0</option>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					</select>
 			</td>
 			<td class="product-price">
 				<p>$ 299.0</p>
@@ -421,18 +438,21 @@
 				Total Amount Sold: 
 			</td> -->
 			
-			<!-- <td colspan="12" style="text-align: right; line-height: 55px; font-size: 30px;">
+			<td colspan="12" style="text-align: right; line-height: 55px; font-size: 30px;">
 				<div>
 					<span>Total Amount Sold: $</span>
 					<input type="text" id="totsold" style="border: 1px solid rgba(255, 98, 0, 0.945)" placeholder="Amount" disabled>
 				</div>
-			</td> -->
+			</td>
 		</tr>
 		</table>
 		<div><br></div>
 		<!-- <div><br></div> -->
 		<div class="frame">
-			<button class="custom-btn1 confirmButton" type="button" id = "button" onclick="" value = "Checkout - Use Paypal"  >
+			<button class="custom-btn resetButton" type="reset" id = "button">
+				Reset
+			</button>
+			<button class="custom-btn1 confirmButton" type="button" id = "button" onclick="nextprocess()" value = "Checkout - Use Paypal"  >
 				Checkout - Use Paypal
 			</button>
 		</div>

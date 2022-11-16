@@ -11,6 +11,8 @@ var app = express();
 
 app.use('/src', express.static(__dirname + '/src'));
 app.use('/css', express.static(__dirname + '/css'));
+app.use('/Javascript', express.static(__dirname + '/Javascript'));
+
 
 app.get('/', function(req, res) {
 //	res.send("Hello World!");

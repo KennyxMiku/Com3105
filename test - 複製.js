@@ -36,14 +36,7 @@ app.get('/view_catalog', function(req, res) {
 
 //add_cart
 app.get('/add_cart', function(req, res) {
-		//res.send("Add Cart - need MySQL");
-		var responseText = 'Prod_id: ' + req.query.prod_id + '<br>';
-		responseText += 'Qty: ' + req.query.qty + '<br>';
-		responseText += 'Price: ' + req.query.price + '<br>';
-		responseText += 'Username: ' + req.query.f_username + '<br><br>';
-		res.send(responseText); //what is the diff res.send() keeps sending, res.end() used for end of response process
-	
-
+		res.send("Add Cart - need MySQL");
 });
 
 //check_out
